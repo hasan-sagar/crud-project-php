@@ -17,16 +17,6 @@ if (!$connection) {
             $query   = "SELECT * FROM `registration` WHERE username='$username'
             AND password='" . md5($password) . "'";
             $result = mysqli_query($connection, $query);
-            // $rows = mysqli_num_rows($result);
-            // if ($rows == 1) {
-            //     $_SESSION['username'] = $username;
-            //     header("Location: ./add.php");
-            // } else {
-            //     echo "<div class='form'>
-            //           <h3>Incorrect Username/password.</h3><br/>
-            //           <p class='link'>Click here to <a href='login.php'>Login</a> again.</p>
-            //           </div>";
-            // }
             include_once './login_sucess.php';
         }
     }
