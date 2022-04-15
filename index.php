@@ -29,7 +29,7 @@
                 <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                     <li><a href="./index.php" class="nav-link px-2 link-dark">Home</a></li>
                     <li><a href="./add.php" class="nav-link px-2 link-dark">Add</a></li>
-                    <li><a href="./update.php" class="nav-link px-2 link-dark">Update</a></li>
+                    
                 </ul>
 
                 <div class="col-md-3 text-end">

@@ -14,13 +14,10 @@ if (!$connection) {
         $username = $_POST['username'];
         $email = $_POST['email'];
         $password = $_POST['password'];
-        // $password = md5($pass);
-        if ($username && $email && $password) {
-
-            $query    = "INSERT into `registration` (username, password, email)
-                     VALUES ('$username', '" . md5($password) . "', '$email')";
+        $passwordHash = md5($password);
+        if ($username && $email && $passwordHash) {
+            $query = "INSERT into `registration` (username, password, email) VALUES ('$username', '$passwordHash', '$email')";
             mysqli_query($connection, $query);
-            // header("Location:index.php?added=true");
             include_once './signup_sucess.php';
         }
     }
