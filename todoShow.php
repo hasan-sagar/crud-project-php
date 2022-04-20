@@ -28,7 +28,6 @@ include_once './auth_user.php';
 
     <div class="mx-auto" style="width: 80vw;">
 
-        <?php if ($resultQuery) { ?>
         <h1 class="text-center">Todo List</h1>
         <table class="table mx-auto">
             <thead>
@@ -40,10 +39,9 @@ include_once './auth_user.php';
                 </tr>
             </thead>
             <tbody>
-      <?php  }  else {
-        echo "no result"; }
+                <?php
 
-        ?> 
+                ?>
                 <?php
                 while ($data = mysqli_fetch_assoc($resultQuery)) { ?>
                     <tr>

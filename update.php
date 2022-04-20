@@ -5,13 +5,13 @@ $id = $_GET['id'] ?? '';
 $connection = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
 if (!$connection) {
-    throw new Exception("bal");
+    throw new Exception("Error Connection");
 } else {
     $action = $_POST['action'] ?? '';
-    $fname = $_POST['title'] ?? '';
-    $lname = $_POST['time'] ?? '';
-    if ($fname && $lname) {
-        $updatequery = "UPDATE addtodo SET title = '$fname', date = '$lname' WHERE id = $id";
+    $title = $_POST['title'] ?? '';
+    $time = $_POST['time'] ?? '';
+    if ($title && $time) {
+        $updatequery = "UPDATE addtodo SET title = '$title', date = '$time' WHERE id = $id";
         $con = mysqli_query($connection, $updatequery);
         header("Location:todoShow.php");
     }
