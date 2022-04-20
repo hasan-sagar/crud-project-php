@@ -38,7 +38,7 @@
                 <input type="password" name="password" class="form-control" id="exampleInputPassword1">
             </div>
             <input type="hidden" name="action" value="add">
-            <button onclick="return confirm('Delete Todo From List?')" type="submit" class="btn btn-primary">SignUp</button>
+            <button  type="submit" class="btn btn-primary">SignUp</button>
         </form>
     </div>
 
